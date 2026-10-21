@@ -85,7 +85,7 @@ function renderHome() {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>留言板 v${VERSION}</title>
+  <title>最新留言板 v${VERSION}</title>
   <style>
     body { font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #f3f5f9; margin: 0; }
     .wrap { max-width: 600px; margin: 40px auto; padding: 0 16px; }
@@ -108,11 +108,11 @@ function renderHome() {
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>📝 留言板</h1>
+      <h1>📝 最新的留言板</h1>
       <div class="sub">版本 v${VERSION} · 主机 ${escapeHtml(os.hostname())} · 共 ${messages.length} 条留言</div>
       <form method="POST" action="/messages">
         <input name="name" maxlength="20" placeholder="你的昵称" required>
-        <textarea name="text" maxlength="500" placeholder="说点什么吧..." required></textarea>
+        <textarea name="text" maxlength="500" placeholder="说点什么吧...最多 500 字..我后面添加的" required></textarea>
         <button type="submit">提交留言</button>
       </form>
     </div>
