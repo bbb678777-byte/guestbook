@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    image: guestbook:latest
+    container_name: guestbook
+    ports:
+      - "3001:3000"               # 宿主机用 3001，避免和 hello-docker 的 3000 冲突
+    environment:
+      - TZ=Asia/Shanghai
+      - PORT=3000
+    volumes:
+      - guestbook-data:/app/data  # 数据卷：容器删了重建，留言也不会丢
+    restart: always
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# 声明命名数据卷，Docker 会自动创建并管理（宝塔 Docker →「存储卷」里能看到）
+volumes:
+  guestbook-data:

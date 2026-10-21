@@ -1,0 +1,10 @@
+# 统一 LF 换行，避免 shell 脚本在 Linux 上报 $'\r' 错误
+* text=auto eol=lf
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.ico binary

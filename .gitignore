@@ -1,0 +1,14 @@
+# 本地运行产生的留言数据，不提交
+app/data/
+
+node_modules/
+*.log
+.env
+.env.*
+*.pem
+id_rsa*
+id_ed25519*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+.git
+.github
+.gitignore
+.gitattributes
+.dockerignore
+node_modules
+**/node_modules
+app/data
+*.md
+Dockerfile
+docker-compose.yml
+deploy.sh
+.env
+.env.*
+.vscode
+.idea
